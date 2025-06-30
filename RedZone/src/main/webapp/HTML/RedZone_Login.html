@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>레드 존 로그인</title>
+  <link rel="stylesheet" href="/RedZone/CSS/RedZone_Form.css" />
+  <script src="/RedZone/JS/RedZone_Login.js"></script>
+</head>
+
+<body>
+  <div class="form-container">
+    <h2>로그인</h2>
+    <form id="login-form" action="RedZone_Login.jsp" method="post">
+      <label for="username">아이디</label>
+      <input type="text" id="username" name="username" placeholder="아이디" required />
+
+      <label for="password">비밀번호</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" name="password" placeholder="비밀번호" required />
+        <button type="button" class="toggle-password" onclick="togglePassword('password')">👁️</button>
+      </div>
+
+      <button type="submit">로그인</button>
+    </form>
+    <p>아직 회원이 아니신가요? <a href="RedZone_Register.html">회원가입</a></p>
+  </div>
+</body>
+
+</html>

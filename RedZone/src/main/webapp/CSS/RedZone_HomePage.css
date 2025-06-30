@@ -1,0 +1,140 @@
+/* ✅ 구글 폰트 예시 (HTML <head>에 추가 필요)
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Orbitron", "Segoe UI", sans-serif;
+    background-color: #0f0f1a;
+    color: #f0f0f0;
+}
+
+header {
+    background: #1a1a2e;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    color: #ff3333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+#hero {
+    background-image: url("/RedZone/Image/RedZone_Image.png");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#hero>* {
+    position: relative;
+    z-index: 2;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #ffaa00;
+}
+
+section {
+    scroll-margin-top: 100px;
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.race-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.race {
+    flex: 1;
+    min-width: 280px;
+    background: #1e1e2f;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.race:hover {
+    transform: scale(1.03);
+}
+
+footer {
+    background: #1a1a2e;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #aaa;
+}
