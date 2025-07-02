@@ -1,4 +1,3 @@
-// 🔸 RedZone_JoinController.java (Controller)
 package controller;
 
 import java.io.*;
@@ -11,6 +10,8 @@ import model.UserDTO;
 
 @WebServlet("/RedZone_JoinController")
 public class RedZone_JoinController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -29,15 +30,15 @@ public class RedZone_JoinController extends HttpServlet {
 
             if (result) {
                 request.setAttribute("username", username);
-                RequestDispatcher rd = request.getRequestDispatcher("/RedZone/JSP/RedZone_JoinSuccess.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("JSP/RedZone_JoinSuccess.jsp");
                 rd.forward(request, response);
             } else {
-                response.sendRedirect("/JSP/RedZone_JoinFail.jsp");
+                response.sendRedirect("JSP/RedZone_JoinFail.jsp");
             }
         } catch (Exception e) {
             e.printStackTrace();
             request.setAttribute("errorMessage", e.getMessage());
-            RequestDispatcher rd = request.getRequestDispatcher("/RedZone/JSP/RedZone_JoinFail.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("JSP/RedZone_JoinFail.jsp");
             rd.forward(request, response);
         }
     }

@@ -6,7 +6,7 @@ import java.sql.*;
 public class UserDAO {
 
     private final String jdbcURL = "jdbc:mysql://localhost:3306/redzone_db?useSSL=false&serverTimezone=UTC";
-    private final String jdbcUser = "qiuye99";         // 변수명이 'user' → 'dbUser'로 변경
+    private final String jdbcUser = "qiuye99";        
     private final String jdbcPassword = "qiuye99~!";
 
     // 🔹 회원가입 (INSERT)
