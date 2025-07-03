@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="model.UserDTO" %>
 
 <head>
 <meta charset="UTF-8">
@@ -11,9 +12,13 @@
 
 <body>
 	<form>
-		<h2>로그인 실패</h2>
-		<p><%= request.getAttribute("errorMessage") %></p>
-		<a href="/RedZone/HTML/RedZone_Login.html">다시 로그인</a>
+		<%
+		UserDTO user = (UserDTO) session.getAttribute("loginUser");
+		%>
+		<h2><%=user.getUsername()%>님, 환영합니다!
+		</h2>
+		<p>게임을 시작하려면 아래 버튼을 누르세요.</p>
+		<a href="/RedZone/HTML/RedZone_Start.html">게임 시작으로 가기</a>
 	</form>
 </body>
 
