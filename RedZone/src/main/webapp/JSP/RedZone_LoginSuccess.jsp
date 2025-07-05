@@ -19,6 +19,7 @@
 		</h2>
 		<p>게임을 시작하려면 아래 버튼을 누르세요.</p>
 		<a href="/RedZone/HTML/RedZone_Start.html">게임 시작으로 가기</a>
+		<a href="/RedZone/HTML/RedZone_HomePage.html">홈 페이지로 돌아가기</a>
 	</form>
 </body>
 
