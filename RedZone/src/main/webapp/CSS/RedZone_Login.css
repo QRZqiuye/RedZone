@@ -1,28 +1,45 @@
 @charset "UTF-8";
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   background-color: #0f0f1a;
-  color: #fff;
+  color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url("/RedZone/Image/RedZone_Image.png"); /* 선택적으로 배경 이미지 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+/* 로그인 박스 컨테이너 */
 .login-container {
-  background-color: #1e1e2f;
+  background: rgba(26, 26, 46, 0.95);
   padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
-  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  width: 350px;
+  border: 2px solid #ff3333;
+  backdrop-filter: blur(4px);
 }
 
-h2 {
+/* 제목 */
+.login-container h2 {
   text-align: center;
   color: #ff3333;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #ff0000;
 }
 
+/* 입력폼 */
 form {
   display: flex;
   flex-direction: column;
@@ -32,32 +49,49 @@ label {
   margin-top: 15px;
   margin-bottom: 5px;
   font-weight: bold;
+  color: #ffcc00;
 }
 
 input {
-  padding: 10px;
+  padding: 12px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  background-color: #222;
+  color: #fff;
+  font-size: 0.9em;
+  border: 1px solid #444;
 }
 
+input:focus {
+  outline: none;
+  border-color: #ffcc00;
+  box-shadow: 0 0 5px #ffaa00;
+}
+
+/* 버튼 */
 button {
   margin-top: 20px;
-  padding: 10px;
-  background-color: #ff3333;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  padding: 12px;
+  background: linear-gradient(to right, #ff3333, #cc0000);
+  color: #fff;
   font-weight: bold;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
+  box-shadow: 0 0 10px #ff0000;
+  transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-  background-color: #cc0000;
+  background: linear-gradient(to right, #ff4444, #990000);
+  transform: scale(1.05);
 }
 
+/* 링크 및 문구 */
 p {
   text-align: center;
   margin-top: 20px;
+  font-size: 0.85em;
 }
 
 p a {
@@ -69,13 +103,9 @@ p a:hover {
   text-decoration: underline;
 }
 
+/* 비밀번호 토글 */
 .password-wrapper {
   position: relative;
-}
-
-.password-wrapper input {
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .toggle-password {
@@ -90,9 +120,10 @@ p a:hover {
   color: #ccc;
 }
 
+/* 에러 메시지 */
 .error-msg {
   color: #ff6666;
-  font-size: 0.9em;
+  font-size: 0.85em;
   margin-top: 10px;
   height: 1em;
 }
