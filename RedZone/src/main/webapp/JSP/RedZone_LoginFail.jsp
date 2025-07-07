@@ -13,7 +13,7 @@
 	<form>
 		<h2>로그인 실패</h2>
 		<p><%= request.getAttribute("errorMessage") %></p>
-		<a href="/RedZone/HTML/RedZone_Login.html">다시 로그인</a>
+		<button onclick="location.href='/RedZone/HTML/RedZone_Login.html'">다시 로그인</button>
 	</form>
 </body>
 
