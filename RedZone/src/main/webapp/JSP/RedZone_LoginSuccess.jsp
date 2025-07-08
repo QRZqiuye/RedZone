@@ -18,8 +18,8 @@
 		<h2><%=user.getUsername()%>님, 환영합니다!
 		</h2>
 		<p>게임을 시작하려면 아래 버튼을 누르세요.</p>
-		<button onclick="location.href='/RedZone/HTML/RedZone_Start.html'">게임 시작으로 가기</button>
-		<button onclick="location.href='/RedZone/HTML/RedZone_HomePage.html'">홈 페이지로 돌아가기</button>
+		<button type="button" onclick="location.href='/RedZone/HTML/RedZone_Start.html'">게임 시작으로 가기</button>
+		<button type="button" onclick="location.href='/RedZone/HTML/RedZone_HomePage.html'">홈 페이지로 돌아가기</button>
 	</form>
 </body>
 
